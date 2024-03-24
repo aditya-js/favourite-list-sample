@@ -10,14 +10,14 @@ pipeline {
         stage('Test') {
             steps {
                  dir('app') {
-                   sh 'npm install'
-                   sh 'npm test'
+                   bat 'npm install'
+                   bat 'npm test'
     }
             }
         }
         stage('Build') {
             steps {
-                sh 'pwd'
+                bat 'npm run build'
             }
         }
     }
