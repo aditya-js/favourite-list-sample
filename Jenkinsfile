@@ -17,7 +17,9 @@ pipeline {
         }
         stage('Build') {
             steps {
+                 dir('app') {
                 bat 'npm run build'
+                 }
             }
         }
     }
