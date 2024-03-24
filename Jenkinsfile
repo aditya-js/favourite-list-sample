@@ -10,14 +10,14 @@ pipeline {
         stage('Test') {
             steps {
                  dir('app') {
-                   bat 'yarn'
-                   bat 'yarn test'
+                   bat 'npm install --registry https://registry.npmjs.org'
+                   bat 'npm run test'
     }
             }
         }
         stage('Build') {
             steps {
-                bat 'yarn build'
+                bat 'npm run build'
             }
         }
     }
