@@ -3,6 +3,6 @@ WORKDIR /apps
 ADD . .
 
 RUN npm install
-CMD ["npm", "run", "build"]
+RUN npm run build
 CMD ["npm", "run", "preview"]
 EXPOSE 3000
