@@ -25,7 +25,7 @@ pipeline {
         stage('Build Image') {
             steps {
                  dir('app') {
-                   sh 'docker build -t my-react:1.0'
+                   sh 'docker build -t my-react:1.0 .' 
                  }
             }
         }
