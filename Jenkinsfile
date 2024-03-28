@@ -10,15 +10,15 @@ pipeline {
         stage('Test') {
             steps {
                  dir('app') {
-                   bat 'npm install --registry https://registry.npmjs.org'
-                   bat 'npm run test'
+                   sh 'npm install --registry https://registry.npmjs.org'
+                   sh 'npm run test'
     }
             }
         }
         stage('Build') {
             steps {
                  dir('app') {
-                bat 'npm run build'
+                sh 'npm run build'
                  }
             }
         }
