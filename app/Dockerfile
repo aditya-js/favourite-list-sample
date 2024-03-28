@@ -1,6 +1,6 @@
 FROM node:latest 
 WRKDIR /apps
-ADD ./app/ .
+ADD . .
 
 RUN npm install
 CMD ["npm", "run", "build"]
